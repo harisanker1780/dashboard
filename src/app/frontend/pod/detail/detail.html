@@ -41,6 +41,14 @@ limitations under the License.
   <kd-header>[[Init Containers|Subtitle at the top of the container details.]]</kd-header>
 </kd-container-info>
 
+<kd-content-card>
+  <kd-content>
+    <kd-persistent-volume-claim-card-list persistent-volume-claim-list="::ctrl.podDetail.persistentVolumeClaimList"
+                                          persistent-volume-claim-list-resource="::ctrl.persistentVolumeClaimsResource">
+    </kd-persistent-volume-claim-card-list>
+  </kd-content>
+</kd-content-card>
+
 <kd-content-card ng-if="::ctrl.podDetail.conditions.length">
   <kd-content>
     <kd-condition-list conditions="::ctrl.podDetail.conditions"></kd-condition-list>
@@ -51,11 +59,3 @@ limitations under the License.
 
 <kd-event-card-list event-list="::ctrl.podDetail.eventList"
                     event-list-resource="::ctrl.eventListResource"></kd-event-card-list>
-
-<kd-content-card>
-  <kd-content>
-    <kd-persistent-volume-claim-card-list persistent-volume-claim-list="::ctrl.podDetail.persistentVolumeClaimList"
-                                          persistent-volume-claim-list-resource="::ctrl.persistentVolumeClaimsResource">
-    </kd-persistent-volume-claim-card-list>
-  </kd-content>
-</kd-content-card>
