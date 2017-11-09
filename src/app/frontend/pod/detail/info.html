@@ -35,4 +35,10 @@ limitations under the License.
       {{::$ctrl.pod.podIP}}
     </kd-info-card-entry>
   </kd-info-card-section>
+  <kd-info-card-section name="[[User links|Subtitle 'User links' at the top of the column about user links attached in resource objects annotations, (right) at the pod detail view.]]"
+                        ng-if="::$ctrl.pod.userLinks.length">
+    <kd-info-card-entry>
+      <kd-user-links userlinks="::$ctrl.pod.userLinks"></kd-user-links>
+    </kd-info-card-entry>
+  </kd-info-card-section>
 </kd-info-card>

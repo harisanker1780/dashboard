@@ -1,4 +1,4 @@
-// Copyright 2017 The Kubernetes Authors.
+// Copyright 2017 The Kubernetes Dashboard Authors.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,12 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-@import '../../../variables';
-
-.kd-endpoint-icon {
-  font-size: inherit;
-  height: inherit;
-  margin: 0;
-  padding: $baseline-grid / 2;
-  vertical-align: middle;
-}
+/**
+ * Returns directive definition object for the component that displays the user links
+ * (type {backendApi.UserLinks})
+ * @return {!angular.Component}
+ */
+export const userLinksComponent = {
+  templateUrl: 'common/components/userlinks/userlinks.html',
+  bindings: {
+    /** {!Array<!backendApi.UserLinks>} */
+    'userlinks': '<',
+  },
+};

@@ -899,6 +899,7 @@ backendApi.Container;
  *   restartCount: number,
  *   metrics: backendApi.PodMetrics,
  *   conditions: !backendApi.ConditionList,
+ *   userLinks: !Array<!backendApi.UserLinks>,
  *   errors: !Array<!backendApi.Error>
  * }}
  */
@@ -923,6 +924,16 @@ backendApi.RoleList;
 
 /**
  * @typedef {{
+ *  description: string,
+ *  link: string,
+ *  isURLValid: string,
+ *  isProxyURL: string
+ * }}
+ */
+backendApi.UserLinks;
+
+/**
+ * @typedef {{
  *   endpoints: !Array<!backendApi.Endpoint>,
  *   listMeta: !backendApi.ListMeta
  * }}
@@ -936,6 +947,7 @@ backendApi.EndpointList;
  *  internalEndpoint: !backendApi.Endpoint,
  *  externalEndpoints: !Array<!backendApi.Endpoint>,
  *  endpointList: !Array<!backendApi.Endpoint>,
+ *  userLinks: !Array<!backendApi.UserLinks>,
  *  selector: !Object<string, string>,
  *  type: string,
  *  clusterIP: string,
@@ -952,6 +964,7 @@ backendApi.ServiceDetail;
  *  typeMeta: !backendApi.TypeMeta,
  *  internalEndpoint: !backendApi.Endpoint,
  *  externalEndpoints: !Array<!backendApi.Endpoint>,
+ *  userLinks: !Array<!backendApi.UserLinks>,
  *  selector: !Object<string, string>,
  *  type: string,
  *  clusterIP: string
